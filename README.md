@@ -1,5 +1,10 @@
 # Moonveil Deobfuscator Discord Bot
 
+
+
+# WARNING: U NEED LUAU INSTALLED ON UR MACHINE.
+
+
 Moonveil is **environment-locked**: its VM only decrypts correctly inside a real
 Roblox environment (the decrypt key derives from real `game` object properties).
 So deobfuscation is a **two-phase** flow driven from Discord.
