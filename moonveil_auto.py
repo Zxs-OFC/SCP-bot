@@ -472,7 +472,7 @@ def main():
         info = result["info"]
         out_path = os.path.splitext(path)[0] + "_strings.txt"
         with open(out_path, "w", encoding="utf-8") as h:
-            h.write("-- string extractor made by 2zvh\n")
+            h.write("-- string extractor by speack (_zxs.)\n")
             h.write("\n".join(result["strings"]))
         if info:
             print("    deserializer={0}  field={1}  dir={2}  salt={3}  anchors={4}  protos={5}".format(
