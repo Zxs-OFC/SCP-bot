@@ -93,7 +93,7 @@ for p in protos:
                      % (idx, role))
     body.append("")
 
-out = ["--!nocheck", "-- Moonveil devirtualized from Roblox trace by 2zvh", ""]
+out = ["--!nocheck", "-- Moonveil devirtualized from Roblox trace by speack", ""]
 out += body
 out.append("")
 out.append("return { %s }" % ", ".join("proto_%d" % i for i in allidx))
