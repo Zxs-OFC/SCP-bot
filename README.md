@@ -1,4 +1,4 @@
-# Moonveil Discord bot
+# Moonveil Deobfuscator Discord Bot
 
 Moonveil is **environment-locked**: its VM only decrypts correctly inside a real
 Roblox environment (the decrypt key derives from real `game` object properties).
