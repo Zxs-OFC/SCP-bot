@@ -2430,7 +2430,7 @@ def reconstruct_clean(protos, opmap2, settable, jump_tags, behavior=None,
                     resolved.setdefault(a, name)
     out = []
     out.append("--!nocheck")
-    out.append("-- Moonveil reconstruction by 2zvh")
+    out.append("-- Moonveil reconstruction by speack")
     if detected_lib:
         out.append("-- detected UI library: %s (receiver of unbound UI calls)" % detected_lib)
     svc_used = sorted({ins["K"] for p in protos for ins in p["code"]
@@ -2573,7 +2573,7 @@ def reconstruct_clean(protos, opmap2, settable, jump_tags, behavior=None,
 def reconstruct_source(user_protos):
     """Assemble the best-effort reconstruction across all user protos."""
     out = []
-    out.append("-- Moonveil Reconstruction by 2zvh.")
+    out.append("-- Moonveil Reconstruction by speack.")
     out.append("-- Enable other options from the bot to get disassemble output, opcodes and strings.")
     out.append("")
 
@@ -2945,7 +2945,7 @@ def beta_main(base, src):
 
     disasm_path = os.path.join(base, "moonveil_beta_disasm.txt")
     with open(disasm_path, "w", encoding="utf-8") as h:
-        h.write("-- MoonVeil beta devirtualizer by 2zvh\n")
+        h.write("-- MoonVeil beta devirtualizer by speack\n")
         h.write("-- opcode field=%s  operand fields=%s\n\n" % (
             info["opcode_field"], info["operand_fields"]))
         for n, (tid, seq) in enumerate(sorted(arrays, key=lambda a: -len(a[1]))):
@@ -3020,7 +3020,7 @@ def main():
 
     op_path = os.path.join(outdir, "moonveil_opcodes.txt")
     with open(op_path, "w", encoding="utf-8") as h:
-        h.write("-- opcode mapper made by 2zvh\n")
+        h.write("-- opcode mapper made by speack\n")
         h.write("tag={0}  operands={1}  sbx={2}  const={3}\n\n".format(
             tag_field, fl["operands"], fl["sbx"], const_field))
         for tag in sorted(opmap):
@@ -3040,7 +3040,7 @@ def main():
         if res:
             spath = os.path.join(outdir, "moonveil_strings.txt")
             with open(spath, "w", encoding="utf-8") as h:
-                h.write("-- string extractor (fallback) made by 2zvh\n")
+                h.write("-- string extractor (fallback) made by speack \n")
                 h.write("\n".join(res["strings"]))
             print("[*] recovered {0} strings ({1} proto tables) -> {2}".format(
                 len(res["strings"]), res["tables"], spath))
@@ -3064,7 +3064,7 @@ def main():
     print("[*] behavioral trace: {0} high-level calls captured".format(len(behavior)))
     disasm_path = os.path.join(outdir, "moonveil_disasm.txt")
     with open(disasm_path, "w", encoding="utf-8") as h:
-        h.write("-- disassembler made by 2zvh\n\n")
+        h.write("-- disassembler made by speack\n\n")
         for p in protos:
             kids = (" children=%s" % p["children"]) if p.get("children") else ""
             h.write("function proto_{0}  ({1} instructions){2}\n".format(
